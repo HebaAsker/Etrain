@@ -16,7 +16,7 @@ class CousreController extends Controller
     //show all courses
     public function index()
     {
-        $courses = CourseDetail::all();
+        $courses = CourseDetail::paginate(20);
         return view('dashboard.course.view_courses',compact('courses'));
     }
 

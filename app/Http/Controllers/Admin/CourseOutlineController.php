@@ -11,7 +11,7 @@ class CourseOutlineController extends Controller
     //show all courses
     public function index()
     {
-        $course_outline = CourseOutline::all(); //to desplay all courses outlines
+        $course_outline = CourseOutline::paginate(20); //to desplay some courses outlines
         return view('dashboard.course_outline.view_course_outlines',compact('course_outline'));
     }
 
